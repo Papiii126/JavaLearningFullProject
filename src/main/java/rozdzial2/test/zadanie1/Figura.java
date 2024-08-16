@@ -3,7 +3,7 @@ package rozdzial2.test.zadanie1;
 import lombok.Getter;
 
 @Getter
-abstract class Figura {
+public abstract class Figura {
     private static int counter = 1;
     private int id;
 
