@@ -17,8 +17,8 @@ public class Main {
         //plik ma sie znajdowac w tym pakiecie
 
         List<Figura> figuraList = new ArrayList<>();
-        figuraList.add(new Kolo(10));
         figuraList.add(new Kwadrat(10));
+        figuraList.add(new Kolo(10));
         figuraList.add(new Prostokat(10, 20));
         figuraList.add(new Kwadrat(15));
 
