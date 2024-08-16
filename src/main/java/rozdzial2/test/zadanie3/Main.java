@@ -37,5 +37,4 @@ public class Main {
         List<Figura> figury = new ArrayList<>();
         return figury;
     }
-
 }
