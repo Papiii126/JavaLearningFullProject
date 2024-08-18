@@ -19,7 +19,7 @@ public class Main {
 //Figura nr 2: Koło o promienu 10.
 //Figura nr 3: Prostokat o bokach 10x20.
 //Figura nr 4: Kwadrat o boku 15.
-//
+////
 //b) Następnie:
 //- znajdź figurę z największym obwodem
         Figura maxObwod = figury.stream()
