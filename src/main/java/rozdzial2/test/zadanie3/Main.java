@@ -24,7 +24,7 @@ public class Main {
         List<Figura> figury = wczytajZPliku(sciezka);
         for (Figura f : figury) {
             System.out.println(f);
-// }
+//////}
 //System.out powinien wypisac:
 //Figura nr 1: Kwadrat o boku 10.
 //Figura nr 2: Koło o promienu 10.
