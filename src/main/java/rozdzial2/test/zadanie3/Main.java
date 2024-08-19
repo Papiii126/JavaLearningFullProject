@@ -13,7 +13,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         // Zadanie 3: (2ptk)
 //Wczytaj liste figur z pliku, wypisz ponownie wszystkie figury powinno byc:
-
+        //TODO change path
         String sciezka = "C:\\Users\\biuro\\Desktop\\Git-Repozytorium\\JavaLearning\\src\\main\\java\\rozdzial2\\test\\zadanie2\\figury.txt";
         FileReader fr = new FileReader("C:\\Users\\biuro\\Desktop\\Git-Repozytorium\\JavaLearning\\src\\main\\java\\rozdzial2\\test\\zadanie2\\figury.txt");
         BufferedReader br = new BufferedReader(fr);

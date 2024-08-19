@@ -15,7 +15,7 @@ public class Main {
         //        Zadanie 2: (2ptk)
 //Zapisz liste figur do pliku tekstowego (w formie tekstowej!) w taki sposob abys w kolejnym zadaniu mogl je wczytac
         ////plik ma sie znajdowac w tym pakiecie
-
+        //TODO change path
         List<Figura> figuraList = new ArrayList<>();
         figuraList.add(new Kwadrat(10));
         figuraList.add(new Kolo(10));
