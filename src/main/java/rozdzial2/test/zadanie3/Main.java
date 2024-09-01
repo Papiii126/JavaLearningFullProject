@@ -14,8 +14,8 @@ public class Main {
         // Zadanie 3: (2ptk)
 //Wczytaj liste figur z pliku, wypisz ponownie wszystkie figury powinno byc:
         //TODO change path
-        String sciezka = "C:\\Users\\biuro\\Desktop\\Git-Repozytorium\\JavaLearning\\src\\main\\java\\rozdzial2\\test\\zadanie2\\figury.txt";
-        FileReader fr = new FileReader("C:\\Users\\biuro\\Desktop\\Git-Repozytorium\\JavaLearning\\src\\main\\java\\rozdzial2\\test\\zadanie2\\figury.txt");
+        String sciezka = "src\\main\\java\\rozdzial2\\test\\zadanie2\\figury.txt";
+        FileReader fr = new FileReader(sciezka);
         BufferedReader br = new BufferedReader(fr);
         String linia;
         while ((linia = br.readLine()) != null) {
