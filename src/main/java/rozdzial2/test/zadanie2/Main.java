@@ -22,7 +22,7 @@ public class Main {
         figuraList.add(new Prostokat(10, 20));
         figuraList.add(new Kwadrat(15));
 
-        FileWriter zapis = new FileWriter("C:\\Users\\biuro\\Desktop\\Git-Repozytorium\\JavaLearning\\src\\main\\java\\rozdzial2\\test\\figury.txt");
+        FileWriter zapis = new FileWriter("src\\main\\java\\rozdzial2\\test\\zadanie2\\figury.txt");
         for (Figura figura : figuraList){
             zapis.write(figura.toString() + "\n");
         }
