@@ -37,7 +37,7 @@ public class Samolot {
     }
 
     public void addPasazer(Pasazer pasazer) {
-        if (pasazerList.size() >= iloscMiejscSiedzacych) {
+        if (pasazerList.size() >= this.iloscMiejscSiedzacych) {
             throw new RuntimeException("Nie można dodać pasażera! Brak wolnych miejsc!");
         } else if (pasazer.getWaga() + checkSumOfWeight() > ladownosc) {
             throw new RuntimeException("Została przekroczona ładowność samolotu!");
@@ -47,7 +47,7 @@ public class Samolot {
 
 
     public void addBagaz(Bagaz bagaz) {
-        if (bagazList.size() >= ladownosc) {
+        if (bagazList.size() >= this.ladownosc) {
             throw new RuntimeException("Nie można dodać bagażu! Przekroczona ładowność!");
         } else if (bagaz.getWaga() + checkSumOfWeight() > ladownosc) {
             throw new RuntimeException("Została przekroczona ładowność samolotu!");
