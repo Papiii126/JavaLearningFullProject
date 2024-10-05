@@ -2,6 +2,7 @@ package rozdzial3.zajecia3;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Main {
@@ -59,6 +60,7 @@ public class Main {
     //Zadanie 1:
 //Utwórz metodę generyczną, która przyjmuje dwa argumenty tego samego typu i zwraca ten pierwszy.
     static <T, V> T returnFirstArgument(T firstArgument, V secondArgument) {
+        //A co jezeli przyjmiemy dwa argumenty ale różnego typu. Do poprawy
         return firstArgument;
     }
 
@@ -92,6 +94,7 @@ public class Main {
     //Zadanie 5:
 //Utwórz metodę generyczną, która sprawdza, czy dwa podane argumenty są sobie równe.
     static <T, V> boolean compareTwoArguments(T firstArgument, V secondArgument) {
+        // A co jezel jeden argument stringiem a drugi bedzie innego typu??
         if (firstArgument.equals(secondArgument)) {
             return true;
         } else {
@@ -102,6 +105,7 @@ public class Main {
     //Zadanie 6:
 //Napisz metodę generyczną, która przyjmuje trzy argumenty tego samego typu i zwraca ich listę.
     static <T> List<T> returnList(T firstArgument, T secondArgument, T thirdArgument) {
+
         List<T> tList = new ArrayList<>(List.of(firstArgument, secondArgument, thirdArgument));
         return tList;
     }
@@ -120,12 +124,14 @@ public class Main {
     //Zadanie 8:
 //Utwórz metodę generyczną, która przyjmuje tablicę i zwraca pierwszy element tej tablicy.
     static <T> T returnFirstArgumentFromArray(T[] array) {
+        // do poprawy. Co bedzie jezeli lista bedzie pusta
         return array[0];
     }
 
     //Zadanie 9:
 //Napisz metodę generyczną, która sprawdza, czy tablica zawiera określony element.
     static <T> boolean ifContainsElement(T[] array, T element) {
+//        Arrays.stream(array).toList().contains(element); mozna to tak zrobic
         for (T t : array) {
             if (t.equals(element)) {
                 return true;
