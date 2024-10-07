@@ -17,7 +17,7 @@ public class Main {
         https://www.baeldung.com/java-generics
         */
 
-        String word = returnFirstArgument("Ola", "Mati");
+        String word = returnFirstArgument("P", "L");
         System.out.println(word);
 
         String[] result = returnArrayWithTwoArguments("Witaj", "Siema", String.class);
@@ -50,7 +50,7 @@ public class Main {
         boolean b1 = ifContainsElement(strings1, "palec");
         System.out.println(b1);
 
-        List<Integer> integerList = new ArrayList<>(List.of(100,200,300,400,500));
+        List<Integer> integerList = new ArrayList<>(List.of(100, 200, 300, 400, 500));
         int size = returnSizeOfArray(integerList);
         System.out.println(size);
 
@@ -59,9 +59,13 @@ public class Main {
 
     //Zadanie 1:
 //Utwórz metodę generyczną, która przyjmuje dwa argumenty tego samego typu i zwraca ten pierwszy.
+    //A co jezeli przyjmiemy dwa argumenty ale różnego typu. Do poprawy
     static <T, V> T returnFirstArgument(T firstArgument, V secondArgument) {
-        //A co jezeli przyjmiemy dwa argumenty ale różnego typu. Do poprawy
-        return firstArgument;
+        if (!firstArgument.getClass().equals(secondArgument.getClass())) {
+            throw new RuntimeException("Podano argumenty różnego typu!");
+        } else {
+            return firstArgument;
+        }
     }
 
     //Zadanie 2:
@@ -93,12 +97,14 @@ public class Main {
 
     //Zadanie 5:
 //Utwórz metodę generyczną, która sprawdza, czy dwa podane argumenty są sobie równe.
+    // A co jezel jeden argument stringiem a drugi bedzie innego typu??
     static <T, V> boolean compareTwoArguments(T firstArgument, V secondArgument) {
-        // A co jezel jeden argument stringiem a drugi bedzie innego typu??
-        if (firstArgument.equals(secondArgument)) {
-            return true;
-        } else {
+        if (!firstArgument.getClass().equals(secondArgument.getClass())) {
+            throw new RuntimeException("Podano argumenty różnego typu!");
+        } else if (!firstArgument.equals(secondArgument)) {
             return false;
+        } else {
+            return true;
         }
     }
 
@@ -124,8 +130,11 @@ public class Main {
     //Zadanie 8:
 //Utwórz metodę generyczną, która przyjmuje tablicę i zwraca pierwszy element tej tablicy.
     static <T> T returnFirstArgumentFromArray(T[] array) {
-        // do poprawy. Co bedzie jezeli lista bedzie pusta
-        return array[0];
+        if (array.length == 0) {
+            throw new RuntimeException("Podana tablica jest pusta!");
+        } else {
+            return array[0];
+        }
     }
 
     //Zadanie 9:
@@ -140,9 +149,9 @@ public class Main {
         return false;
     }
 
-//Zadanie 10:
+    //Zadanie 10:
 //Stwórz metodę generyczną, która przyjmuje listę i zwraca jej rozmiar.
-    static <T> int returnSizeOfArray(List<T> list){
+    static <T> int returnSizeOfArray(List<T> list) {
         return list.size();
     }
 }
