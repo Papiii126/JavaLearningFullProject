@@ -6,15 +6,17 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println(noNeg(Arrays.asList(1, 2, 3, -40)));
+//        List<Integer> listaaa = Arrays.asList(1, -10, 5, 6, -1, -5, 155);
+//        System.out.println(noNeg(listaaa));
 
         List<Integer> lista5 = new ArrayList<>(Arrays.asList(1, 2, 3));
         System.out.println(doubling(lista5));
 
-        System.out.println(lista5);
+        List<Integer> lista55 = new ArrayList<>(Arrays.asList(1, 2, 3));
+        System.out.println(square(lista55));
 
         List<String> lista = new ArrayList<>(Arrays.asList("Ania", "Tomek", "Kasia", "Hania", "Grzes"));
-        System.out.println(noZ(lista));
+        System.out.println(noA(lista));
 
         List<Integer> lista1 = new ArrayList<>(Arrays.asList(5, 1, 4, 10, -5));
         System.out.println(sortLiczby(lista1));
@@ -41,6 +43,8 @@ public class Main {
         zmienMape2(a, "piec");
         System.out.println(a);
 
+        System.out.println(podwoj("Alicja"));
+
         String imie = "a,b,c";
         List<String> listaStringow = stworzListe(imie);
         System.out.println(listaStringow);
@@ -54,7 +58,7 @@ public class Main {
     }
 
     // napisz metode która kazda liczbe mnozy przez sama siebie
-    public List<Integer> square(List<Integer> nums) {
+    public static List<Integer> square(List<Integer> nums) {
         nums.replaceAll(n -> n * n);
         return nums;
     }
@@ -67,9 +71,10 @@ public class Main {
 
     // napisz metode która wyfiltruje nam z listy intów wszystkie te które sa
     // mniejsze od 0
-    public static List<Integer> noNeg(List<Integer> nums) {
-        nums.removeIf(n -> n < 0);
-        return nums;
+    public static List<Integer> noNeg(List<Integer> listaaa) {
+        List<Integer> lessThan0 = new ArrayList<>(listaaa);
+        listaaa.removeIf(n -> n < 0);
+        return listaaa;
     }
 
     // napisz metode która wyfiltruje nam z listy intów wszystkie te które koncza
@@ -114,7 +119,7 @@ public class Main {
     }
 
     // napisz metode ktora z listy stringów wyswietli tylko te które posiadaja a
-    public static List<String> noZ(List<String> strings) {
+    public static List<String> noA(List<String> strings) {
         strings.removeIf(n -> !n.contains("a"));
         return strings;
     }

@@ -19,6 +19,9 @@ public class Main {
         int number2 = shoutFirstElementsAndReturnSecond('X', 99);
         System.out.println(number2 + 99);
 
+        String word = shoutFirstElementsAndReturnSecond("Ola", "Franek");
+        System.out.println(word);
+
     }
 
     static <T> void shout(T thingToShout) {
@@ -32,6 +35,7 @@ public class Main {
 
     static <T, V> V shoutFirstElementsAndReturnSecond(T firstElement, V secondElement) {
         System.out.println(firstElement + " %% ");
+        System.out.println(secondElement + "!!!!");
         return secondElement;
     }
 }

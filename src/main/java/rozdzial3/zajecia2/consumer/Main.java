@@ -20,7 +20,6 @@ public class Main {
 
         greetCustomerConsumerV2.accept(maria, false);
 
-        greetCustomerConsumerV2.accept(maria, true);
     }
 
     static BiConsumer<Customer, Boolean> greetCustomerConsumerV2 = (customer, showPhoneNumber) ->

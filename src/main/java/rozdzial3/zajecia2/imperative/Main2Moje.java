@@ -5,42 +5,40 @@ import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-import static rozdzial3.zajecia2.imperative.Gender.FEMALE;
+import static rozdzial3.zajecia2.imperative.Gender.*;
 import static rozdzial3.zajecia2.imperative.Gender.MALE;
 
-public class Main {
+public class Main2Moje {
     public static void main(String[] args) {
-        List<Person> people = List.of(
-            new Person("John", MALE),
-            new Person("Maria", FEMALE),
-            new Person("Aisha", FEMALE),
-            new Person("Alex", MALE),
-            new Person("Alice", FEMALE)
+        List<Person> personList = List.of(
+                new Person("Tomasz", MALE),
+                new Person("Alicja", FEMALE),
+                new Person("Antoni", MALE),
+                new Person("Kasia", FEMALE)
         );
 
-        System.out.println("// Imperative approach");
-        // Imperative approach
+        // Standardowe podejscie
 
         List<Person> females = new ArrayList<>();
 
-        for (Person person : people) {
+        for (Person person : personList) {
             if (FEMALE.equals(person.getGender())) {
                 females.add(person);
             }
         }
-
+        
         for (Person female : females) {
             System.out.println(female);
         }
 
-        System.out.println("// Declarative approach");
-        // Declarative approach
+        //Declarative approach
 
         Predicate<Person> personPredicate = person -> FEMALE.equals(person.getGender());
 
-        List<Person> females2 = people.stream()
+        List<Person> females2 = personList.stream()
                 .filter(personPredicate)
                 .collect(Collectors.toList());
-        females2.forEach(System.out::println);
+        females2.forEach(System.out::println); 
+
     }
 }
